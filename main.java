@@ -4,7 +4,7 @@ import java.util.*;
 
 public class main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
         // Input the number for which the table is to be printed
         System.out.print("Enter the number: ");
