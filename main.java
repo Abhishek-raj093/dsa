@@ -11,7 +11,7 @@ public class main {
         int num = sc.nextInt();
 
         // Initialize the counter to 10 (default range)
-        int i = 10;
+         int i = 10;
 
         // Loop to print the table in reverse order
         while (i >= 1) {
