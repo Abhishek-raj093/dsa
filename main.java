@@ -15,7 +15,7 @@ public class main {
 
         // Loop to print the table in reverse order
         while (i >= 1) {
-            Sys tem.out.println(num + " * " + i + " = " + (num * i));
+            System.out.println(num + " * " + i + " = " + (num * i));
             i--; // Decrement the counter
         }
     }
