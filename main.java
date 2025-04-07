@@ -8,7 +8,7 @@ public class main{
 
         // Inputm the number for which the table is to be printed
         System. out.print("Enter the number: ");
-        int num =sc.nextInt();
+        int num =sc.nextInt()
 
         // Initialize the counter to 10 (default range)
     int i= 10;
