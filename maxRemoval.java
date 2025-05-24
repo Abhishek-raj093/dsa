@@ -10,7 +10,7 @@ class Solution {
         // Create groupedEnds[i] array to store all query ends starting at index i
         int[][] groupedEnds = new int[n][];
         for (int i = 0; i < n; i++)
-            groupedEnds[i] = new int[endCount[i]];
+            groupedEnds[i] = new int[endCount[i]]
 
         // Fill groupedEnds arrays
         for (int[] query : queries)
