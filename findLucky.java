@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int findLucky(int[] arr) {
         int[] output = new int[501];
