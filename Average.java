@@ -6,6 +6,7 @@ public class average {
         int n = sc.nextInt();
         int m = n;
         int sum = 0;
+//Change
 
         while (m>0){
             int num = sc.nextInt();
