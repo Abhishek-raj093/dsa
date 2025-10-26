@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     int triSum(int n) {
         return (n * (n + 1)) >> 1;
