@@ -4,7 +4,6 @@ class Solution {
     int triSum(int n) {
         return (n * (n + 1)) >> 1;
     }
-
     public int totalMoney(int days) {
         int nWeeks = days / 7;
         int rDays = days % 7;
