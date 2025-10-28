@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
   public int snakesAndLadders(int[][] board) {
     final int n = board.length;

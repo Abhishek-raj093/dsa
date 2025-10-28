@@ -1,3 +1,5 @@
+import java.util.*;
+
 class DisjointSet{
     char[] parent = new char[26];
     public DisjointSet(){

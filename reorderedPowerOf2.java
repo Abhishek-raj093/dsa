@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public boolean reorderedPowerOf2(int n) {
         String s = String.valueOf(n);

@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     static boolean checkBit(int n,int i){
         return ((n)&(1<<i))!=0;
