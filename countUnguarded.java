@@ -10,7 +10,7 @@ class Solution {
           }
           for(int gu[]:guards)
         {
-            visit[gu[0]][gu[1]]=2;
+            visit[gu[0]][gu[1]]=2
         }
           int[][] dxdy={{-1,0},{1,0},{0,-1},{0,1}};
           for(int row=0;row<gr;row++){
