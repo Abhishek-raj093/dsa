@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Test {
     public static void main(String[] args) {
     int x = 200, y = 50, z = 100;
