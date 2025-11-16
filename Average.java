@@ -3,8 +3,8 @@ import java.util.*;
 public class average {
     public static void main(Strings[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = n;
+        int b = sc.nextInt();
+        int m = b;
         int sum = 0;
 //Change
 
@@ -13,7 +13,7 @@ public class average {
             sum = sum + num;
             m--;
         }
-        System.out.println(sum/n);
+        System.out.println(sum/b);
     }
 }
 
