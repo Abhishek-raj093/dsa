@@ -1,3 +1,4 @@
+import java.util.*;
 class Solution {
     public int areaOfMaxDiagonal(int[][] dimensions) {
         double maxD = Math.sqrt(Math.pow(dimensions[0][0], 2) + Math.pow(dimensions[0][1], 2));
