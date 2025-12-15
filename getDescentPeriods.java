@@ -1,19 +1,11 @@
 class Solution {
-    public int numberOfWays(String corridor) {
-        int MOD = (int) 1e9 + 7;
-        long ans = 1;
-        int cnt = 0, prev = -1;
-        
-        for (int i = 0; i < corridor.length(); i++) {
-            if (corridor.charAt(i) == 'S') {
-                cnt++;
-                if (cnt % 2 == 1 && cnt > 2) {
-                    ans = ans * (i - prev) % MOD;
-                }
-                if (cnt % 2 == 0) prev = i;
-            }
+    public long getDescentPeriods(int[] prices) {
+        long ans = 1, count = 1;
+        for(int i = 1; i < prices.length; i++) {
+            if(prices[i] == prices[i - 1] - 1) count++;
+            else count = 1;
+            ans += count;
         }
-        
-        return cnt % 2 == 0 && cnt > 0 ? (int)ans : 0;
+        return ans;
     }
 }
