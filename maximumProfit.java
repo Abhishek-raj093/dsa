@@ -1,4 +1,4 @@
-public class Solution {
+class Solution {
     class State {
         long maxProfit, buyHold, sellHold;
         State(long p, long b, long s) {
@@ -28,6 +28,4 @@ public class Solution {
         
         return dp[k].maxProfit;
     }
-} {
-    
 }
