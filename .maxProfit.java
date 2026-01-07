@@ -20,6 +20,6 @@ class Solution {
             best = Math.max(best, nxt - prev);
         }
 
-        return base + best;
+        return base + best
     }
 }
