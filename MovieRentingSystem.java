@@ -1,3 +1,5 @@
+import java.util.*;
+
 class MovieRentingSystem {
     HashMap<Integer,TreeSet<Pair>> unrented;
     TreeSet<Group> rentedGroup;
