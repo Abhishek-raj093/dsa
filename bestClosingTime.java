@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int bestClosingTime(String customers) {
         int penalty = 0, best_penalty = 0, ans = 0;
