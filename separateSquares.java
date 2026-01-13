@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public double separateSquares(int[][] squares) {
         double totalArea = 0;
