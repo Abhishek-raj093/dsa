@@ -1,3 +1,5 @@
+import java.util.";
+
 class Solution {
     private int factors(int n) {
         int sum = 0, c = 0;
