@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int findLHS(int[] nums) {
         Map<Integer, Integer> frequencyMap = new HashMap<>();
