@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int closestMeetingNode(int[] edges, int node1, int node2) {
         int n = edges.length;
