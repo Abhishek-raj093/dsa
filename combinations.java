@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     private final int MOD = 1000000007;
     private static final int MAX_SIZE = 100000;
