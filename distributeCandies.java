@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public long distributeCandies(int n, int limit) {
         int min = Math.max(0, n - 2 * limit); // Minimum candies first child can get
