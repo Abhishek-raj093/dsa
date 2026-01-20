@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int numEquivDominoPairs(int[][] dominoes) {
         int[] count = new int[100];  // Fixed array: keys range from 11 to 99
