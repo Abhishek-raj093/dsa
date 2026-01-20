@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public long maxProfit(int[] prices, int[] strategy, int k) {
         int n = prices.length, h = k >> 1;
