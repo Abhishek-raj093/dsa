@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int compareVersion(String version1, String version2) {
         int index1 = 0, index2 = 0;
