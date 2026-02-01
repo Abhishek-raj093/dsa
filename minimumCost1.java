@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int minimumCost1(int[] nums) {
         int startElement = nums[0];
