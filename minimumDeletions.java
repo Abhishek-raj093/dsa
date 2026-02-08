@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int minimumDeletions(String s) {
         int b_before_a = 0, deletion = 0;
