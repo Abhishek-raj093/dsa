@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public long getDescentPeriods(int[] prices) {
         long ans = 1, count = 1;
