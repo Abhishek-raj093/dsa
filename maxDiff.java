@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
   public int maxDiff(int num) {
     final String s = String.valueOf(num);
