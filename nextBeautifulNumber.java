@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public boolean solve(int x){
         String s = String.valueOf(x);
