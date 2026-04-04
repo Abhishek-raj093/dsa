@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public boolean kLengthApart(int[] nums, int k) {
         final int n=nums.length;
