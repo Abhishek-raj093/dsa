@@ -1,0 +1,26 @@
+import java.util.*;
+
+class Solution {
+        public int minMirrorPairDistance(int[] nums) {
+        Map<Integer, Integer> map = new HashMap<>();
+        int res = Integer.MAX_VALUE;
+        for(int i=0; i<nums.length; i++){
+            int val = nums[i];
+            int rev = getRev(val);
+            if(map.containsKey(val)){
+                res = Math.min(res, i - map.get(val));
+            }
+            map.put(rev, i);
+        }
+        return res==Integer.MAX_VALUE?-1:res;
+    }
+
+    private int getRev(int val) {
+        int res = 0;
+        while(val>0){
+            res = res*10 + val%10;
+            val = val/10;
+        }
+        return res;
+    }
+}
