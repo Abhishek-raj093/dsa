@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int countHillValley(int[] nums) {
         int cnt = 0;
