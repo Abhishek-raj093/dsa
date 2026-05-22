@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public List<Integer> findAllPeople(int n, int[][] meetings, int firstPerson) {
         Arrays.sort(meetings, (a, b) -> a[2] - b[2]);
