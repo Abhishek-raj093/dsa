@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int[] countMentions(int numberOfUsers, List<List<String>> events) {
         int[] mentions = new int[numberOfUsers];
