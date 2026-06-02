@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public String findLexSmallestString(String S, int a, int b) {
         char[] s = S.toCharArray();
