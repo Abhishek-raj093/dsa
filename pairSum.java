@@ -8,6 +8,9 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
+import java.util.*;
+
 class Solution {
     public int pairSum(ListNode head) {
         List<Integer> temp = new ArrayList<>();
