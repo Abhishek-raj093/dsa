@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int countMajoritySubarrays1(int[] nums, int target) {
         int n = nums.length;
