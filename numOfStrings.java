@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int numOfStrings(String[] patterns, String word) {
         int count = 0;
