@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int maximumLength(int[] nums) {
         HashMap<Integer,Integer>map=new HashMap<>();
