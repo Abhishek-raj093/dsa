@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int maximumSafenessFactor(List<List<Integer>> grid) {
         int n = grid.size();
