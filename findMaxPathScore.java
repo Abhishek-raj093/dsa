@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     private int[] head, next, to, weight;
     private long k;
