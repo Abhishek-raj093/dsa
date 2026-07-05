@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int minScore(int n, int[][] roads) {
         List<int[]> graph[] = new ArrayList[n + 1];
