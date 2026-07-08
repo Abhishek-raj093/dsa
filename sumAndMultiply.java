@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public long sumAndMultiply(int n) {
         String num = Integer.toString(n);
