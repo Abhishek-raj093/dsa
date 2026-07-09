@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int[] sumAndMultiply0(String s, int[][] queries) {
         final long MOD = 1_000_000_007;
