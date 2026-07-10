@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public boolean[] pathExistenceQueries(int n, int[] nums, int maxDiff, int[][] queries) {
         int[] comp = new int[n];
