@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int[] pathExistenceQueries0(int n, int[] nums, int maxDiff, int[][] queries) {
         int LOG = 18;
