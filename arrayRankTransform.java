@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int[] arrayRankTransform(int[] arr) {
         Map<Integer, Integer> rankMap = new HashMap<>();
