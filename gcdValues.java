@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int[] gcdValues(int[] nums, long[] queries) {
         int maxValue = 0;
