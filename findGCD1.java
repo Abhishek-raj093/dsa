@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int findGCD1(int[] nums) {
         int minNum = nums[0];
