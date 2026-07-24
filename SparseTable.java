@@ -1,3 +1,5 @@
+import java.util.*;
+
 class SparseTable {
 
     private List<List<Integer>> st;
