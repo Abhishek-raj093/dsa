@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     static void fwht(long[] a,boolean inv){
         int n=a.length;
