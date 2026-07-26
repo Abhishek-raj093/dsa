@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int maximumProduct(int[] nums) {
         long max1 = Long.MIN_VALUE;
