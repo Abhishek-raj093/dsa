@@ -5,7 +5,6 @@ class Solution {
     public String smallestPalindrome(String s, int k) {
         int[] freq = new int[26];
         for (char c : s.toCharArray()) freq[c - 'a']++;
-
         String mid = "";
         for (int i = 0; i < 26; i++) {
             if (freq[i] % 2 == 1) {
@@ -14,7 +13,6 @@ class Solution {
                 break;
             }
         }
-
         int[] half = new int[26];
         int halfLen = 0;
         for (int i = 0; i < 26; i++) {
