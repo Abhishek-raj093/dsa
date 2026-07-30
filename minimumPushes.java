@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int minimumPushes(String word) {
         // so whaever appears max no of times for first 8 assign them 1 -> next 8 assign them 2 -> next left assign them 3. 
