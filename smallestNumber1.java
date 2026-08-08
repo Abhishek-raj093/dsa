@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int smallestNumber1(int n, int t) {
 
