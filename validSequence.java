@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Solution {
     public int[] validSequence(String word1, String word2) {
         int n2 = word2.length();
