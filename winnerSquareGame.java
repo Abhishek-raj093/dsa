@@ -1,5 +1,6 @@
 import java.util.*;
 import java.util.Arrays;
+import java.util.List;
 
 class Solution {
     public boolean winnerSquareGame(int n) {
