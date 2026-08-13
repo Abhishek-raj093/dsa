@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 class Solution {
     public int missingInteger(int[] nums) {
         int prefixSum = nums[0];
