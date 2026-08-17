@@ -5,7 +5,6 @@ class Solution {
         int n=arr.length;
         int [] pre=new int[n];
         pre[0]=arr[0];
-        //Pre compute prefix sum array
         for(int i=1;i<n;i++){
             pre[i]=pre[i-1]+arr[i];
         }
@@ -29,22 +28,18 @@ class Solution {
             int right=pre[high]-pre[i];
 
             int alice=0;
-            //if left segment sum is larger then remove it and take right and move low to i+1.
             if(left>right){
                 alice=right+check(dp,i+1,high,pre);
             }
-            //if right segment sum is larger then remove it and take left and move high to i.
             else if(left<right){
                 alice=left+check(dp,low,i,pre);
             }
-            //both are equal then take any segment but we need max so recurse on both sides.
             else{
                 alice=left+Math.max(
                     check(dp,low,i,pre),
                     check(dp,i+1,high,pre)
                 );
             }
-            //store ans in dp.
             ans=Math.max(alice,ans);
         }
 
