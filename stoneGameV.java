@@ -1,72 +1,53 @@
 import java.util.*;
 
 class Solution {
-    private int search(int[] prefix, int leftBound, int rightBound) {
-        int total = prefix[rightBound + 1] - prefix[leftBound];
-
-        int start = leftBound;
-
-        int left = leftBound;
-        int right = rightBound;
-
-        while (left < right) {
-            int mid = left + (right - left) / 2;
-
-            int leftSum = prefix[mid + 1] - prefix[start];
-
-            if (leftSum * 2 >= total) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
+    public int stoneGameV(int[] arr) {
+        int n=arr.length;
+        int [] pre=new int[n];
+        pre[0]=arr[0];
+        //Pre compute prefix sum array
+        for(int i=1;i<n;i++){
+            pre[i]=pre[i-1]+arr[i];
         }
 
-        return left;
+        Integer [][] dp=new Integer[n][n];
+
+        return check(dp,0,n-1,pre);
     }
 
-    public int stoneGameV(int[] stoneValue) {
-        int n = stoneValue.length;
+    public int check(Integer [][] dp,int low,int high,int []pre){
+        if(low==high)
+            return 0;
 
-        int[] prefix = new int[n + 1];
+        if(dp[low][high]!=null)
+            return dp[low][high];
 
-        for (int i = 1; i <= n; i++) {
-            prefix[i] = prefix[i - 1] + stoneValue[i - 1];
-        }
+        int ans=0;
 
-        int[][] dp = new int[n][n];
-        int[][] left = new int[n][n];
-        int[][] right = new int[n][n];
+        for(int i=low;i<high;i++){
+            int left=(low==0)?pre[i]:pre[i]-pre[low-1];
+            int right=pre[high]-pre[i];
 
-        for (int i = 0; i < n; i++) {
-            left[i][i] = stoneValue[i];
-            right[i][i] = stoneValue[i];
-        }
-
-        for (int length = 1; length < n; length++) {
-            for (int i = 0; i < n - length; i++) {
-                int j = i + length;
-
-                int k = search(prefix, i, j);
-
-                int total = prefix[j + 1] - prefix[i];
-
-                int leftHalf = prefix[k + 1] - prefix[i];
-
-                if (leftHalf * 2 == total) {
-                    dp[i][j] = Math.max(left[i][k], right[k + 1][j]);
-                } else {
-                    int leftBest = k == i ? 0 : left[i][k - 1];
-
-                    int rightBest = k == j ? 0 : right[k + 1][j];
-
-                    dp[i][j] = Math.max(leftBest, rightBest);
-                }
-
-                left[i][j] = Math.max(left[i][j - 1], total + dp[i][j]);
-                right[i][j] = Math.max(right[i + 1][j], total + dp[i][j]);
+            int alice=0;
+            //if left segment sum is larger then remove it and take right and move low to i+1.
+            if(left>right){
+                alice=right+check(dp,i+1,high,pre);
             }
+            //if right segment sum is larger then remove it and take left and move high to i.
+            else if(left<right){
+                alice=left+check(dp,low,i,pre);
+            }
+            //both are equal then take any segment but we need max so recurse on both sides.
+            else{
+                alice=left+Math.max(
+                    check(dp,low,i,pre),
+                    check(dp,i+1,high,pre)
+                );
+            }
+            //store ans in dp.
+            ans=Math.max(alice,ans);
         }
 
-        return dp[0][n - 1];
+        return dp[low][high]=ans;
     }
 }
