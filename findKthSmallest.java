@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 class Solution {
     public long findKthSmallest(int[] coins, int k) {
