@@ -19,7 +19,6 @@ class Solution {
             while(cnt==k){
 
                 if((r-l+1)==mini){
-                    // same length, keep the smaller one
                     if(check(s, start, l, mini)){
                         start = l;
                     }
@@ -36,8 +35,6 @@ class Solution {
 
         return start==-1 ? "" : s.substring(start, start+mini);
     }
-
-    // true if window at 'start' is bigger than window at 'l'
     private boolean check(String s, int start, int l, int mini){
         int n = start+mini;
         int m = l+mini;
