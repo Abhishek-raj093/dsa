@@ -5,13 +5,11 @@ class Solution {
         for(int r = 0; r < s.length(); r++) {
             if(s.charAt(r) == '1') cnt++; 
 
-            while(cnt == k) {
-                // equals to `k` 
+            while(cnt == k) { 
                 if(len > r - l + 1) {
                     len = r - l + 1; 
                     ans = s.substring(l, r + 1); 
                 } else if(len == r - l + 1) {
-                    // In this case we need smaller one 
                     if(ans.compareTo(s.substring(l, r + 1)) > 0) {
                         ans = s.substring(l , r + 1); 
                     } 
