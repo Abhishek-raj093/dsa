@@ -16,7 +16,6 @@ class Solution {
                         ans = s.substring(l , r + 1); 
                     } 
                 }
-
                 if(s.charAt(l++) == '1') cnt--; 
             }
         }
