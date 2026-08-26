@@ -2,51 +2,25 @@ import java.util.*;
 
 class Solution {
     public String shortestBeautifulSubstring(String s, int k) {
-        if(s.length()<k) return "";
+        int l = 0, cnt = 0, len = 101; 
+        String ans = ""; 
+        for(int r = 0; r < s.length(); r++) {
+            if(s.charAt(r) == '1') cnt++; 
 
-        int n = s.length();
-
-        int l = 0;
-        int cnt = 0;
-        int mini = Integer.MAX_VALUE;
-        int start = -1;
-
-        for(int r=0;r<n;r++){
-            char c = s.charAt(r);
-
-            if(c=='1') cnt++;
-
-            while(cnt==k){
-
-                if((r-l+1)==mini){
-                    if(check(s, start, l, mini)){
-                        start = l;
-                    }
-                }
-                else if((r-l+1)<mini){
-                    mini = r-l+1;
-                    start = l;
+            while(cnt == k) { 
+                if(len > r - l + 1) {
+                    len = r - l + 1; 
+                    ans = s.substring(l, r + 1); 
+                } else if(len == r - l + 1) {
+                    if(ans.compareTo(s.substring(l, r + 1)) > 0) {
+                        ans = s.substring(l , r + 1); 
+                    } 
                 }
 
-                if(s.charAt(l)=='1') cnt--;
-                l++;
+                if(s.charAt(l++) == '1') cnt--; 
             }
         }
 
-        return start==-1 ? "" : s.substring(start, start+mini);
-    }
-    private boolean check(String s, int start, int l, int mini){
-        int n = start+mini;
-        int m = l+mini;
-
-        while(start<n && l<m){
-            if(s.charAt(start) > s.charAt(l)) return true;
-            if(s.charAt(start) < s.charAt(l)) return false;
-
-            start++;
-            l++;
-        }
-
-        return false;
+        return ans;  
     }
 }
