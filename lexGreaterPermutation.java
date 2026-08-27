@@ -2,67 +2,29 @@ import java.util.*;
 
 class Solution {
     public String lexGreaterPermutation(String s, String target) {
-        int n = s.length();
-
-        int[] cnt = new int[26];
-
-        for (char ch : s.toCharArray()) {
-            cnt[ch - 'a']++;
+        int count[] = new int[26];
+        for(int i = 0; i < s.length(); i++) {
+            count[s.charAt(i) - 'a']++;
+            count[target.charAt(i) - 'a']--;
         }
-
-        int p = 0;
-
-        while (p < n) {
-            int c = target.charAt(p) - 'a';
-
-            if (cnt[c] == 0) {
-                break;
-            }
-
-            cnt[c]--;
-            p++;
-        }
-
-        int i = p;
-
-        while (i >= 0) {
-            if (i < n) {
-                int t = target.charAt(i) - 'a';
-                int pick = -1;
-
-                for (int c = t + 1; c < 26; c++) {
-                    if (cnt[c] > 0) {
-                        pick = c;
-                        break;
-                    }
-                }
-
-                if (pick >= 0) {
-                    cnt[pick]--;
-
-                    StringBuilder tail = new StringBuilder();
-
-                    for (int c = 0; c < 26; c++) {
-                        for (int j = 0; j < cnt[c]; j++) {
-                            tail.append((char)('a' + c));
-                        }
-                    }
-
-                    cnt[pick]++;
-
-                    return target.substring(0, i)
-                        + (char)('a' + pick)
-                        + tail.toString();
+        char t[] = target.toCharArray();
+        for(int i = s.length() - 1; i >= 0; i--) {
+            int b = t[i] - 'a';
+            count[b]++;
+            if(Arrays.stream(count).min().getAsInt() < 0) continue;
+            for(int j = b + 1; j < 26; j++) {
+                if(count[j] > 0) {
+                    count[j]--;
+                    t[i] = (char) ('a' + j);
+                    return new String(t, 0, i + 1) + getMinString(count);
                 }
             }
-
-            i--;
-
-            if (i >= 0) {
-                cnt[target.charAt(i) - 'a']++;
-            }
         }
-
         return "";
+    }
+    private String getMinString(int count[]) {
+        StringBuilder result = new StringBuilder();
+        for(int i = 0; i < 26; i++) result.append(String.valueOf((char)('a' + i)).repeat(count[i]));
+        return result.toString();
     }
 }
