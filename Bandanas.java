@@ -15,7 +15,6 @@ class Solution {
         while(noc >= 1){
             long rightBound = Math.min(n,(long)Math.pow(10,(noc+1)*3)-1);
             long leftBound = ((long)Math.pow(10,noc*3)) - 1;
-            //System.out.println(leftBound+" "+rightBound);
             res += noc * (rightBound - leftBound);
             --noc;
         }
