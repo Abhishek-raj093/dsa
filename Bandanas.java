@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     private int findNod(long n){
         int nod = 0;
