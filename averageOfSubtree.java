@@ -1,16 +1,16 @@
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode() {}
+ * TreeNode(int val) { this.val = val; }
+ * TreeNode(int val, TreeNode left, TreeNode right) {
+ * this.val = val;
+ * this.left = left;
+ * this.right = right;
+ * }
  * }
  */
 
@@ -22,10 +22,11 @@ class Solution {
 
         return res;
     }
+
     public int[] postOrder(TreeNode node) {
 
         if (node == null) {
-            return new int[]{0, 0};
+            return new int[] { 0, 0 };
         }
         int[] left = postOrder(node.left);
         int[] right = postOrder(node.right);
@@ -34,6 +35,6 @@ class Solution {
         if (sum / count == node.val) {
             res++;
         }
-        return new int[]{sum, count};
+        return new int[] { sum, count };
     }
 }
