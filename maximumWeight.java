@@ -3,7 +3,6 @@ import java.util.*;
 class Solution {
     static class Interval {
         int l, r, w, idx;
-
         Interval(int l, int r, int w, int idx) {
             this.l = l;
             this.r = r;
