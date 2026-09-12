@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     static class Interval {
         int l, r, w, idx;
