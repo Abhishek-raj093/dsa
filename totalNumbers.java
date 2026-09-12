@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int totalNumbers(int[] digits) {
         int[] arr = new int[10];
