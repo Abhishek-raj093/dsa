@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public List<String> maxNumOfSubstrings(String s) {
         int n = s.length();
