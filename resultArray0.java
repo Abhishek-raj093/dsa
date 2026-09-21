@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Solution {
     public long[] resultArray(int[] nums, int k) {
         int n = nums.length;
