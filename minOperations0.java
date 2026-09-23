@@ -1,5 +1,5 @@
 class Solution {
-    public int minOperations(int[] nums, int x) {
+    public int minOperations0(int[] nums, int x) {
         int total = 0;
 
         for (int num : nums) {
