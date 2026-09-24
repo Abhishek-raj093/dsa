@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+
+
 class Solution {
     public int smallestIndex(int[] nums) {
         List<Integer> ans = new ArrayList<>();
