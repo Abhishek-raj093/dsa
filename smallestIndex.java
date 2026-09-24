@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.Collections;
 
 class Solution {
     public int smallestIndex(int[] nums) {
