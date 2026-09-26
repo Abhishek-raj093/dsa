@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public String evaluate(String s, List<List<String>> knowledge) {
         int n = s.length();
