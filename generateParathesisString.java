@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Solution {
 
     public void generateParathesisString(String res, int n, HashSet<String> allCombinations,int open, int close)
