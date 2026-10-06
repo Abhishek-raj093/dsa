@@ -8,11 +8,9 @@ class Solution {
         for (char c : s.toCharArray()) {
             if (c == '(') {
                 stack.push(c);
-            }
-            else if (!stack.isEmpty() && c == ')') {
+            } else if (!stack.isEmpty() && c == ')') {
                 stack.pop();
-            }
-            else if (c == ')') {
+            } else if (c == ')') {
                 res++;
             }
         }
