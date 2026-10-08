@@ -11,21 +11,23 @@ class Solution {
         int bal = 0;
 
         for (int i = li; i < s.length(); i++) {
-            if (s.charAt(i) == '(') bal++;
-            if (s.charAt(i) == ')') bal--;
+            if (s.charAt(i) == '(')
+                bal++;
+            if (s.charAt(i) == ')')
+                bal--;
 
-            if (bal >= 0) continue;
+            if (bal >= 0)
+                continue;
 
             for (int j = lj; j <= i; j++) {
                 if (s.charAt(j) == ')' &&
-                    (j == lj || s.charAt(j - 1) != ')')) {
+                        (j == lj || s.charAt(j - 1) != ')')) {
 
                     fwd(
-                        s.substring(0, j) + s.substring(j + 1),
-                        res,
-                        i,
-                        j
-                    );
+                            s.substring(0, j) + s.substring(j + 1),
+                            res,
+                            i,
+                            j);
                 }
             }
 
@@ -39,21 +41,23 @@ class Solution {
         int bal = 0;
 
         for (int i = ri; i >= 0; i--) {
-            if (s.charAt(i) == ')') bal++;
-            if (s.charAt(i) == '(') bal--;
+            if (s.charAt(i) == ')')
+                bal++;
+            if (s.charAt(i) == '(')
+                bal--;
 
-            if (bal >= 0) continue;
+            if (bal >= 0)
+                continue;
 
             for (int j = rj; j >= i; j--) {
                 if (s.charAt(j) == '(' &&
-                    (j == rj || s.charAt(j + 1) != '(')) {
+                        (j == rj || s.charAt(j + 1) != '(')) {
 
                     bwd(
-                        s.substring(0, j) + s.substring(j + 1),
-                        res,
-                        i - 1,
-                        j - 1
-                    );
+                            s.substring(0, j) + s.substring(j + 1),
+                            res,
+                            i - 1,
+                            j - 1);
                 }
             }
 
