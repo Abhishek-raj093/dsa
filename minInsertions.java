@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int minInsertions(String s) {
         int cnt = 0;
