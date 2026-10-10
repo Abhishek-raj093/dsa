@@ -6,7 +6,6 @@ class Solution {
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {
                 if (cnt % 2 == 1) {
-                    // if cnt of opening odd - means a closing is req now otherwise the seq will break. 
                     ans++;
                     cnt--;
                 }
