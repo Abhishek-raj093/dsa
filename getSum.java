@@ -34,7 +34,6 @@ class Solution {
         int swaps = 0;
 
         for (int i = 0; i < n; i++) {
-            // if swap already counted or no swap happened for curr position
             if (visited[i] || arr[i][2] == i)
                 continue;
 
