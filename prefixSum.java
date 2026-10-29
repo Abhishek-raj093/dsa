@@ -14,13 +14,11 @@ class Solution {
             s2 += bit2[index];
             index -= index & -index;
         }
-
         return (long)k * s1 - s2;
     }
 
     private void addBoundary(int index, long delta) {
         long weighted = delta * (index - 1);
-
         while (index <= n) {
             bit1[index] += delta;
             bit2[index] += weighted;
