@@ -39,8 +39,6 @@ class Solution {
 
             int cycleLength = 0;
             int j = i;
-
-            // get cycle length until we come back to starting position
             while (!visited[j]) {
                 visited[j] = true;
                 j = arr[j][2];
