@@ -30,7 +30,6 @@ class Solution {
                 return Integer.compare(a[1], b[1]);
         });
 
-        // visited array for checking if some pos swap is already counted in a cycle
         boolean[] visited = new boolean[n];
         int swaps = 0;
 
