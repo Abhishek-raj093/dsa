@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     private long[] bit1;
     private long[] bit2;
