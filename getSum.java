@@ -1,5 +1,4 @@
 class Solution {
-    // get sum of digits of a number
     public int getSum(int num)
     {
         int sum=0;
