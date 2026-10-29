@@ -14,7 +14,6 @@ class Solution {
         int n= nums.length;
         int arr[][]= new int[n][3];
 
-        // make 2D array storing info about num, sumOfDigits and its originalPosition
         for(int i=0; i<n; i++)
         {
             int sumOfDigits= getSum(nums[i]);
