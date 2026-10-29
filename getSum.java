@@ -23,7 +23,6 @@ class Solution {
             arr[i][2]= i;
         }
 
-        // sort the array based on sumOfDigits, if equal then sort by value of num
         Arrays.sort(arr, (a, b) -> {
             if(a[1]==b[1])
                 return Integer.compare(a[0], b[0]);
