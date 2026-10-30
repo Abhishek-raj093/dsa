@@ -2,7 +2,7 @@ class Solution {
     int mod = (int) 1e9 + 7;
     long[][] comb;
 
-    public int numOfWays(int[] nums) {
+    public int numofWayss(int[] nums) {
         int n = nums.length;
 
         comb = new long[n + 1][n + 1];
