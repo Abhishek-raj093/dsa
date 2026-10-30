@@ -52,7 +52,6 @@ class Solution {
                 right[ri++] = nums[i];
             }
         }
-
         long leftWays = solve(left);
         long rightWays = solve(right);
 
