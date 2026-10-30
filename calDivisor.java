@@ -1,3 +1,5 @@
+
+
 class Solution {
     public void calDivisor(int n, ArrayList<Integer> list){
         for(long i=1; i*i<=n; i++){
