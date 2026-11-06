@@ -20,7 +20,6 @@ class Solution {
         for (int i = sm - 1; i < em; i++) {
             d += days[i];
         }
-
         return d - (sd - 1) - (days[em - 1] - ed);
     }
 }
