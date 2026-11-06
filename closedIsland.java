@@ -20,7 +20,6 @@ class Solution {
             if (grid[0][j] == 0) dfs(grid, m, n, 0, j);
             if (grid[m - 1][j] == 0) dfs(grid, m, n, m - 1, j);
         }
-
         int count = 0;
         for (int i = 1; i < m - 1; i++) {
             for (int j = 1; j < n - 1; j++) {
