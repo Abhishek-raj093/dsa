@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
     public int countDaysTogether(String arriveAlice, String leaveAlice, String arriveBob, String leaveBob) {
-        int[] days = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        int[] days = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
         String start = arriveAlice.compareTo(arriveBob) > 0 ? arriveAlice : arriveBob;
         String end = leaveAlice.compareTo(leaveBob) < 0 ? leaveAlice : leaveBob;
