@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Solution {
     public int minCost(int[][] grid) {
         int m = grid.length;
