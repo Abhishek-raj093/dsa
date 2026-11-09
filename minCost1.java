@@ -47,7 +47,6 @@ public class Solution {
                 return k;
             }
         }
-
         return 0;
     }
 }
