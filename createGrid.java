@@ -1,6 +1,7 @@
 import java.util.*;
 
 class Solution {
+    
     public String[] createGrid(int m, int n) {
         char[][] board = new char[m][n];
         for (int i = 0; i < n; i++) {
