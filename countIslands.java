@@ -36,7 +36,6 @@ class Solution {
                 cnt += dfs(grid, m, n, i, j) % k == 0 ? 1 : 0;
             }
         }
-
         return cnt;
     }
 }
