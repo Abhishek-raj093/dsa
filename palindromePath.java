@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Solution {
     static int n;
     static ArrayList<Integer>[] a;
