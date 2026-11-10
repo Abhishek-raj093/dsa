@@ -1,3 +1,5 @@
+
+
 class Solution {
     public int shortestPath(int n, int[][] edges, String labels, int k) {
         long INF = Long.MAX_VALUE / 4;
