@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.*;
 
 public class Solution {
+    
     static int n;
     static ArrayList<Integer>[] a;
     static int[] p, d, h, t, o, z;
