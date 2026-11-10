@@ -42,7 +42,6 @@ class Solution {
                 }
             }
         }
-
         long ans = INF;
         for (int i = 1; i <= k; i++)
             ans = Math.min(ans, dist[n - 1][i]);
